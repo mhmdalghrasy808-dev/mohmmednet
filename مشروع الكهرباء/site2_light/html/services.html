@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا - الكهرباء والطاقة</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <marquee behavior="scroll" direction="right">
+            ⚡ خدمات جديدة: فاتورة ذكية - صيانة سريعة - استشارات مجانية
+        </marquee>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1>🔧 خدمات المؤسسة العامة للكهرباء والطاقة</h1>
+            <p class="subtitle">نقدم حلولاً شاملة لاحتياجاتك</p>
+        </div>
+        
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="index.html">🏠 الرئيسية</a></li>
+                <li><a href="services.html" class="active">🔧 خدماتنا</a></li>
+                <li><a href="bills.html">🧾 الفواتير</a></li>
+                <li><a href="services.html">📋 طلبات</a></li>
+                <li><a href="contact.html">📢 شكاوى</a></li>
+            <li><a href="login.html">🔐 تسجيل الدخول</a></li>
+            <li><a href="register.html">📝 إنشاء حساب</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h2>خدماتنا الإلكترونية</h2>
+            <p>جميع الخدمات متاحة الآن إلكترونياً</p>
+        </section>
+
+        <!-- شبكة الخدمات -->
+        <div class="services-grid">
+            <div class="service-item">
+                <h4>🧾 الفواتير والإشتراكات</h4>
+                <p>دفع الفواتير - طلب قراءة عداد - تغيير سعة العداد</p>
+                <a href="bills.html">الدخول للخدمة →</a>
+            </div>
+            
+            <div class="service-item">
+                <h4>🔧 الصيانة والخدمات الفنية</h4>
+                <p>طلب صيانة - بلاغ عطل - فحص سلامة التركيبات</p>
+                <a href="services.html">طلب خدمة →</a>
+            </div>
+            
+            <div class="service-item">
+                <h4>📊 الاستشارات والدراسات</h4>
+                <p>دراسات الجدوى - استشارات ترشيد - حلول الطاقة</p>
+                <a href="#">طلب استشارة →</a>
+            </div>
+            
+            <div class="service-item">
+                <h4>🏢 خدمات الشركات</h4>
+                <p>تركيبات صناعية - محطات توليد - عقود صيانة</p>
+                <a href="#">للشركات →</a>
+            </div>
+        </div>
+
+        <!-- نموذج طلب خدمة -->
+        <section class="service-form">
+            <h3>📝 طلب خدمة جديدة</h3>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>نموذج طلب الخدمة</legend>
+                    
+                    <label for="service-type">نوع الخدمة:</label>
+                    <select id="service-type" name="service-type">
+                        <option value="">اختر نوع الخدمة</option>
+                        <option value="maintenance">صيانة كهربائية</option>
+                        <option value="new-connection">اشتراك جديد</option>
+                        <option value="meter-change">تغيير عداد</option>
+                        <option value="capacity-change">تغيير السعة</option>
+                        <option value="inspection">فحص سلامة</option>
+                    </select>
+                    
+                    <label for="customer-id">رقم المشترك (إن وجد):</label>
+                    <input type="text" id="customer-id" name="customer-id">
+                    
+                    <label for="address">عنوان الخدمة:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                    
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="preferred-date">التاريخ المفضل:</label>
+                    <input type="date" id="preferred-date" name="preferred-date">
+                    
+                    <label for="time">الوقت المفضل:</label>
+                    <select id="time" name="time">
+                        <option value="morning">الصباح (8ص - 12م)</option>
+                        <option value="afternoon">الظهر (12م - 4م)</option>
+                        <option value="evening">المساء (4م - 8م)</option>
+                    </select>
+                    
+                    <label for="details">تفاصيل إضافية:</label>
+                    <textarea id="details" name="details" rows="4" placeholder="صف طلبك بالتفصيل..."></textarea>
+                    
+                    <button type="submit">إرسال طلب الخدمة</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- جدول رسوم الخدمات -->
+        <section class="fees-table">
+            <h3>💰 رسوم الخدمات</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الخدمة</th>
+                        <th>الرسوم (ريال)</th>
+                        <th>مدة التنفيذ</th>
+                        <th>ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تركيب عداد جديد</td>
+                        <td>500</td>
+                        <td>3 أيام عمل</td>
+                        <td><small>للاستخدام السكني</small></td>
+                    </tr>
+                    <tr>
+                        <td>زيادة سعة العداد</td>
+                        <td>300</td>
+                        <td>48 ساعة</td>
+                        <td>تصل إلى 100 أمبير</td>
+                    </tr>
+                    <tr>
+                        <td>صيانة عامة</td>
+                        <td>250</td>
+                        <td>24 ساعة</td>
+                        <td>تشخيص العطل</td>
+                    </tr>
+                    <tr>
+                        <td>تركيب لوحة توزيع</td>
+                        <td>1,200</td>
+                        <td>أسبوع</td>
+                        <td><u>للأماكن التجارية</u></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <em>ملاحظة:</em> الأسعار لا تشمل ضريبة القيمة المضافة البالغة 15%
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- خدمات الطوارئ -->
+        <section class="emergency-services">
+            <h3>🚨 خدمات الطوارئ</h3>
+            <div class="emergency-contact">
+                <p><big><strong>الطوارئ على مدار 24 ساعة:</strong></big></p>
+                <p>📞 <u>9200-12345</u> - 📞 <u>911</u> (لحالات الخطر)</p>
+                <p>⏰ خدمة فورية للانقطاعات والأعطال الخطرة</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>خدمات إلكترونية</h4>
+                <ul>
+                    <li><a href="bills.html">دفع الفواتير</a></li>
+                    <li><a href="services.html">طلبات الخدمة</a></li>
+                    <li><a href="contact.html">تقديم شكوى</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>الدعم الفني</h4>
+                <p>للأعطال: 9200-54321</p>
+                <p>للشكاوى: 9200-98765</p>
+                <p>البريد: support@energy.gov.sa</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <hr>
+            <p><small>جميع الخدمات تخضع لشروط وأحكام المؤسسة © 2026</small></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
