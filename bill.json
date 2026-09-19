@@ -1,0 +1,4 @@
+{
+  "title": "تفاصيل الفاتورة الأخيرة",
+  "body": "<table class='table table-bordered table-sm'><tr><th>رقم الفاتورة</th><td>INV-2026-004821</td></tr><tr><th>فترة الاستهلاك</th><td>2026-01-01 إلى 2026-01-31</td></tr><tr><th>الاستهلاك (ك.و.س)</th><td>412</td></tr><tr><th>المبلغ المستحق</th><td>18,540 ريال يمني</td></tr><tr><th>تاريخ الاستحقاق</th><td>2026-02-15</td></tr><tr><th>الحالة</th><td><span class='badge bg-warning text-dark'>غير مسددة</span></td></tr></table>"
+}

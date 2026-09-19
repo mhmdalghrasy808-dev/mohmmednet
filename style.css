@@ -1,0 +1,641 @@
+/* ===== إعادة الضبط والأنماط الأساسية ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===== شريط الإعلانات المتحركة ===== */
+.top-bar {
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+marquee {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* ===== الرأس الرئيسي ===== */
+.main-header {
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== شريط التنقل الرئيسي ===== */
+.primary-nav {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.primary-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.primary-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primary-nav a:hover,
+.primary-nav a.active {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== المحتوى الرئيسي ===== */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== قسم البطل ===== */
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9));
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "⚡";
+    position: absolute;
+    font-size: 12rem;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===== الخدمات السريعة ===== */
+.quick-services {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.quick-services h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.service-item h4 {
+    color: #2980b9;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-item a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* ===== الإحصائيات الحية ===== */
+.live-stats {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.live-stats h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+thead {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===== قسم الأخبار ===== */
+.news-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.news-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.news-section ul {
+    list-style: none;
+}
+
+.news-section li {
+    padding: 0.8rem;
+    border-bottom: 1px dashed #ddd;
+    display: flex;
+    gap: 1rem;
+}
+
+.news-section li:last-child {
+    border-bottom: none;
+}
+
+/* ===== قسم الوسائط ===== */
+.media-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.media-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+video, audio {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== قسم الخريطة ===== */
+.map-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.map-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-section img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+/* ===== التذييل ===== */
+.main-footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 3rem 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.copyright hr {
+    margin: 1rem auto;
+    width: 50%;
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== تصميم متجاوب ===== */
+@media (max-width: 768px) {
+    .primary-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primary-nav a {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
+/* ===== أنماط إضافية للوسوم المطلوبة ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    margin: 2rem 0;
+}
+
+strong, b {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+em, i {
+    color: #3498db;
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+    text-decoration-color: #f39c12;
+}
+
+sub, sup {
+    font-size: 0.8em;
+    color: #7f8c8d;
+}
+
+small {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+big {
+    font-size: 1.2em;
+    color: #27ae60;
+}
+
+/* ===== أنماط القوائم ===== */
+ul, ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+dl {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+dd {
+    margin-right: 1.5rem;
+    color: #34495e;
+}
+
+/* ===== أنماط النماذج ===== */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+fieldset {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+legend {
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #229954, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+/* ===== أنماط الصور ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===== عناصر embed ===== */
+embed {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== شريط الصور المتحرك WowSlider-style ===== */
+.wow-slider-section {
+    margin: 2rem 0;
+}
+.wow-slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+.wow-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+.wow-slide.active {
+    opacity: 1;
+}
+.wow-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+.wow-prev, .wow-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+}
+.wow-prev { right: 15px; }
+.wow-next { left: 15px; }
+.wow-prev:hover, .wow-next:hover { background: rgba(0,0,0,0.7); }
+.wow-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 5;
+}
+.wow-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    display: inline-block;
+}
+.wow-dots .dot.active {
+    background: #f1c40f;
+}
+
+/* ===== نماذج التحقق (Validation) ===== */
+.auth-card {
+    max-width: 480px;
+    margin: 2.5rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+.error-text {
+    display: block;
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* ===== استجابة إضافية (Media Queries) ===== */
+@media (max-width: 992px) {
+    .wow-slider { height: 280px; }
+}
+@media (max-width: 576px) {
+    .wow-slider { height: 200px; }
+    .wow-prev, .wow-next { font-size: 1rem; padding: 0.3rem 0.6rem; }
+    .auth-card { margin: 1rem; padding: 1.2rem; }
+}
+
+/* ===== تخطيط صفحة إنشاء الحساب (Flexbox) ===== */
+.register-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.register-layout .auth-card {
+    flex: 1 1 420px;
+    margin: 2.5rem 0;
+}
+.register-tips {
+    flex: 1 1 260px;
+    background: #eef6ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+}
+.register-tips h4 {
+    margin-bottom: 0.8rem;
+    color: #1e3c72;
+}
+.register-tips ul {
+    padding-right: 1.2rem;
+    line-height: 1.9;
+}
+@media (max-width: 768px) {
+    .register-layout { flex-direction: column; }
+}
